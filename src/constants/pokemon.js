@@ -1,0 +1,57 @@
+const colorByType = {
+  normal: "bg-[#BCBCAC]",
+  fighting: "bg-[#BC5442]",
+  flying: "bg-[#669AFF]",
+  poison: "bg-[#AB549A]",
+  ground: "bg-[#DEBC54]",
+  rock: "bg-[#BCAC66]",
+  bug: "bg-[#ABBC1C]",
+  ghost: "bg-[#6666BC]",
+  steel: "bg-[#ABACBC]",
+  fire: "bg-[#FF421C]",
+  water: "bg-[#2F9AFF]",
+  grass: "bg-[#78CD54]",
+  electric: "bg-[#FFCD30]",
+  psychic: "bg-[#FF549A]",
+  ice: "bg-[#78DEFF]",
+  dragon: "bg-[#7866EF]",
+  dark: "bg-[#785442]",
+  fairy: "bg-[#FFACFF]",
+  unknown: "",
+  shadow: "",
+};
+
+const bgByType = {
+  normal: "bg-gradient-to-t from-[#BCBCAC]/50 to-[#BCBCAC]/90 to-70%",
+  fighting: "bg-gradient-to-t from-[#BC5442]/50 to-[#BC5442]/80 to-70%",
+  flying: "bg-gradient-to-t from-[#669AFF]/50 to-[#669AFF]/90 to-70%",
+  poison: "bg-gradient-to-t from-[#AB549A]/50 to-[#AB549A]/80 to-70%",
+  ground: "bg-gradient-to-t from-[#DEBC54]/50 to-[#DEBC54]/90 to-70%",
+  rock: "bg-gradient-to-t from-[#BCAC66]/50 to-[#BCAC66]/90 to-70%",
+  bug: "bg-gradient-to-t from-[#ABBC1C]/50 to-[#ABBC1C]/90 to-70%",
+  ghost: "bg-gradient-to-t from-[#6666BC]/50 to-[#6666BC]/80 to-70%",
+  steel: "bg-gradient-to-t from-[#ABACBC]/50 to-[#ABACBC]/90 to-70%",
+  fire: "bg-gradient-to-t from-[#FF421C]/50 to-[#FF421C]/80 to-70%",
+  water: "bg-gradient-to-t from-[#2F9AFF]/50 to-[#2F9AFF]/80 to-70%",
+  grass: "bg-gradient-to-t from-[#78CD54]/50 to-[#78CD54]/90 to-70%",
+  electric: "bg-gradient-to-t from-[#FFCD30]/50 to-[#FFCD30]/90 to-70%",
+  psychic: "bg-gradient-to-t from-[#FF549A]/50 to-[#FF549A]/90 to-70%",
+  ice: "bg-gradient-to-t from-[#78DEFF]/50 to-[#78DEFF]/90 to-70%",
+  dragon: "bg-gradient-to-t from-[#7866EF]/50 to-[#7866EF]/80 to-70%",
+  dark: "bg-gradient-to-t from-[#785442]/50 to-[#785442]/80 to-70%",
+  fairy: "bg-gradient-to-t from-[#FFACFF]/50 to-[#FFACFF]/90 to-70%",
+  unknown: "",
+  shadow: "",
+};
+
+const colorByStat = {
+  HP: "[&>div]:bg-red-500 bg-slate-100",
+  ATK: "[&>div]:bg-orange-500 bg-slate-100",
+  DEF: "[&>div]:bg-yellow-500 bg-slate-100",
+  SpA: "[&>div]:bg-blue-300 bg-slate-100",
+  SpD: "[&>div]:bg-green-500 bg-slate-100",
+  SPD: "[&>div]:bg-pink-500 bg-slate-100",
+  TOT: "[&>div]:bg-blue-500 bg-blue-300",
+};
+
+export { colorByType, bgByType, colorByStat };
