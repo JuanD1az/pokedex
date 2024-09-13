@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 import {
+  formatHeight,
+  formatWeight,
   formatAbilities,
   formatStats,
   formatTypes,
@@ -18,11 +20,11 @@ const PokemonProvider = ({ children }) => {
   const showPokemon = async (pokemonInfo) => {
     setIsLoading(true);
 
-    const dataQuery = await fetch(pokemonInfo.species.url);
-    const dataSpecies = await dataQuery.json();
+    const responseSpecies = await fetch(pokemonInfo.species.url);
+    const dataSpecies = await responseSpecies.json();
 
-    const dataQuery2 = await fetch(dataSpecies.evolution_chain.url);
-    const dataEvolution = await dataQuery2.json();
+    const responseEvolution = await fetch(dataSpecies.evolution_chain.url);
+    const dataEvolution = await responseEvolution.json();
 
     const { id, name, height, weight, stats, types, abilities } = pokemonInfo;
     const evolutions = await getEvolutions(dataEvolution);
@@ -30,8 +32,8 @@ const PokemonProvider = ({ children }) => {
     setPokemonDetail({
       id,
       name,
-      height,
-      weight,
+      height: formatHeight(height),
+      weight: formatWeight(weight),
       stats: formatStats(stats),
       types: formatTypes(types),
       abilities: formatAbilities(abilities),

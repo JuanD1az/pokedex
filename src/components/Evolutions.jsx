@@ -16,7 +16,7 @@ const Evolutions = ({ evolutions }) => {
             onClick={() => showPokemon(evolution.pokemonInfo)}
             className="hover:bg-slate-100 transition-colors rounded-3xl"
           >
-            <img src={evolution.image} alt="" className="h-12"/>
+            <img src={evolution.image} alt="pokemon-evolucion" className="h-12" loading="lazy"/>
           </button>
         </article>
       ))}

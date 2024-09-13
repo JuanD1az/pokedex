@@ -1,4 +1,3 @@
-import { colorByType } from "../constants/pokemon";
 import PokemonDetail from "./PokemonDetail";
 
 const ModalPokemon = ({ showModal, onCloseModal, pokemon }) => {

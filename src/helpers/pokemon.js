@@ -1,5 +1,18 @@
 import { getEvolutionsData } from "../services/pokemonServices";
 
+
+const formatHeight = (height) => {
+  return (
+    (height / 10) + 'm'
+  );
+};
+
+const formatWeight = (weight) => {
+  return (
+    (weight / 10) + 'kg'
+  );
+};
+
 const formatStats = (stats) => {
   const nameTypes = {
     hp: "HP",
@@ -33,9 +46,20 @@ const formatTypes = (types) => types.map((type) => type.type.name);
 const formatAbilities = (abilities) =>
   abilities.map((ability) => ability.ability.name);
 
-const getPokemonDescription = (pokemonSpecie) =>
-  pokemonSpecie.flavor_text_entries[1].flavor_text;
-
+const getPokemonDescription = (pokemonSpecie) => {
+  let texto = '';
+  for (let i = 0; i < pokemonSpecie.flavor_text_entries.length; i++){
+    if(pokemonSpecie.flavor_text_entries[i].language.name == 'es'){
+      texto = pokemonSpecie.flavor_text_entries[i].flavor_text;
+      break;
+    }
+  }
+  if(texto){
+    return texto;
+  }
+  return pokemonSpecie.flavor_text_entries[1].flavor_text;
+}
+  
 const getEvolutions = async (evolutionInfo) => {
   const evolutions = [];
   let evolutionData = evolutionInfo.chain;
@@ -73,6 +97,8 @@ const assignInfoToEvolutions = (responses, evolutions) => {
 };
 
 export {
+  formatHeight,
+  formatWeight,
   formatStats,
   formatTypes,
   formatAbilities,

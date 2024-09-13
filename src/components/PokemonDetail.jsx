@@ -5,7 +5,7 @@ const PokemonDetail = ({ pokemon }) => {
   return (
     <>
       <header className="absolute left-1/2 -translate-x-1/2 -translate-y-[60%] scale-[90%] md:scale-[45%] lg:scale-[90%] xl:-translate-y-[72%] xl:scale-[120%] z-20">
-        <img src={pokemon?.image} alt="" />
+        <img src={pokemon?.image} alt="" loading="lazy"/>
       </header>
       <div className={`rounded-tl-3xl space-y-4 rounded-tr-3xl overflow-y-auto px-4 pt-16 grid gap-2 content-start h-full hidden-scroll ${bgByType[pokemon?.types[0]]}`}>
         <div className="space-y-2">
@@ -22,23 +22,23 @@ const PokemonDetail = ({ pokemon }) => {
           </ul>
         </div>
         <div className="text-white">
-          <h4 className="pb-2 font-bold capitalize drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Pokedex Entry</h4>
+          <h4 className="pb-2 font-bold capitalize drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Descripción</h4>
           <p className="text-slate-50 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">{pokemon?.description}</p>
         </div>
         {/* Altura y peso */}
         <section className="grid grid-cols-2 gap-4">
           <div className="grid gap-2">
-            <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Height</h4>
-            <span className="bg-slate-100 block rounded-full p-1 text-sm font-semibold">0.7m</span>
+            <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Altura</h4>
+            <span className="bg-slate-100 block rounded-full p-1 text-sm font-semibold">{pokemon?.height}</span>
           </div>
           <div className="grid gap-2">
-            <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Weight</h4>
-            <span className="bg-slate-100 block rounded-full p-1 text-sm font-semibold">6.9kg</span>
+            <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Peso</h4>
+            <span className="bg-slate-100 block rounded-full p-1 text-sm font-semibold">{pokemon?.weight}</span>
           </div>
         </section>
         {/* Habilidades */}
         <section className="grid gap-2">
-          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Abilities</h4>
+          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Habilidades</h4>
           <ul className="grid grid-cols-2 gap-4">
             {pokemon?.abilities.map((ability) => (
               <li
@@ -52,7 +52,7 @@ const PokemonDetail = ({ pokemon }) => {
         </section>
         {/* Stats */}
         <section className="grid gap-2">
-          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Stats</h4>
+          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Estadísticas</h4>
           <ul className="flex justify-center gap-3 flex-wrap">
             {pokemon?.stats.map((stat) => (
               <li
@@ -70,7 +70,7 @@ const PokemonDetail = ({ pokemon }) => {
           </ul>
         </section>
         <section className="grid gap-2 pb-6">
-          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Evolutions</h4>
+          <h4 className="font-bold capitalize text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">Evoluciones</h4>
           <Evolutions evolutions={pokemon?.evolutions ?? []} />
         </section>
       </div>

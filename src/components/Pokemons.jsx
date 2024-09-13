@@ -52,9 +52,9 @@ export const Pokemons = () => {
       </header>
       <form>
         <div className="bg-white p-4 pl-6 flex rounded-2xl shadow-md text-lg">
-          <input className="outline-none flex-1" type="text" autoComplete="off" placeholder="Search your Pokemon" name="pokemonName" onChange={handleChangePokemonName} />
+          <input className="outline-none flex-1" type="text" autoComplete="off" placeholder="Busca tu Pokémon" name="pokemonName" onChange={handleChangePokemonName} />
           <button type="button" className="bg-red-500 p-2 rounded-xl shadow-lg shadow-red-500/50 hover:bg-red-400 transition-colors">
-            <img src="/pokeball-icon.png" alt="" className="w-5 h-5"/>
+            <img src="/pokeball-icon.webp" alt="pokeball-icon" className="w-5 h-5" loading="lazy"/>
           </button>
         </div>
       </form>

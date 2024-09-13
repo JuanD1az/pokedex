@@ -42,7 +42,8 @@ const PokemonPreview = ({ pokemonURL, onClick }) => {
         src={
           pokemon?.sprites.other["official-artwork"].front_default
         }
-        alt=""
+        loading="lazy"
+        alt={pokemon?.name}
       />
     </div>
     <span className="right-0 top-0 p-4 px-6 absolute opacity-60 text-slate-50 text-2xl z-10 w-full flex justify-end">N° {pokemon?.id}</span>
