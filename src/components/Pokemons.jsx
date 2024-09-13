@@ -23,9 +23,20 @@ export const Pokemons = () => {
   };
 
   const getAllPokemons = async() => {
-    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000")
-    const data = await res.json();
-    setAllPokemons(data.results);
+    try {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100000");
+      if (response.ok) {
+        const data = await response.json();
+        setAllPokemons(data.results);
+      } else {
+        if (response.status === 404) throw new Error('404, Not found');
+        if (response.status === 500) throw new Error('500, internal server error');
+        
+        throw new Error(response.status);
+      }
+    } catch (error) {
+      console.error('Fetch', error);
+    }
   };
 
   useEffect(() => {
