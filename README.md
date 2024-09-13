@@ -1,8 +1,8 @@
-# React + Vite
+## Pokedex
+Explora la Pokédex nacional con información detallada de todos los Pokémon. Descubre evoluciones, tipos, movimientos y estadísticas. ¡Todo lo que necesitas saber de cada Pokémon en un solo lugar!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Lenguajes y Herramientas
+<div>
+	<a href="https://github.com/JuanD1az/pokedex"><img height="50" src="https://github.com/user-attachments/assets/d7a4dbc8-76c8-40e3-bcc5-8b6a3c619af9" alt="React" title="React" /></a>&nbsp;&nbsp;
+	<a href="https://github.com/JuanD1az/pokedex"><img height="50" src="https://github.com/user-attachments/assets/51f2e52d-166b-4616-b6aa-53b0ed5f2e10" alt="TailwindCSS" title="TailwindCSS" /></a>&nbsp;&nbsp;
+</div>
